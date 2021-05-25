@@ -1,0 +1,29 @@
+<%- include("header.ejs") -%>
+  <!-- <div class="row container  align-items-center"> -->
+  <div class="container-fluid body1 bg-light">
+    <h1 style="font-weight: bolder; font-size: 350%;">Put your diet on autopilot</h2>
+      <p style="font-size:x-large;">Eat This Much creates personalized meal plans based on your food preferences,
+        budget, and schedule. Reach your diet and nutritional goals with our calorie calculator, weekly meal plans,
+        grocery lists and more. Create your meal plan right here in seconds.</p>
+      <h1 style="font-weight: bolder; padding-top: 5%;">Ready to give it a shot? Let us know your diet.</h1>
+      <form style="border-style: solid ;" class="form1">
+        <div class="row justify-content-center align-items-center">
+        <!-- <div class="col-sm-10 container-fluid justify-content-center"> -->
+          <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">I Want To Eat</label>
+            <input type="number" min="0" max="20000" step="100" placeholder="####" value="1100"
+              class="form-control-lg calorie-input-lg text-md-right" id="cal_input">
+            <!-- <input type="number" min="0" max="20000" step="100"  value="1100" > -->
+            <label for="cal_input" id="cal-input-label" style="font-size: 140%;">Calories</label>
+            <!-- <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="col-form-label-lg"> -->
+
+          </div>
+        <div class="row justify-content-center align-items-center">
+
+          <button type="button" class="btn btn-dark">Generate !</button>
+        </div>
+
+        <!-- </div> -->
+
+      </form>
+  </div>
+  <%- include("footer.ejs") -%>
