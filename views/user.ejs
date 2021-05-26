@@ -1,0 +1,135 @@
+<%- include("header.ejs") -%>
+    <div class="container-fluid bg-light body2">
+        <div class="row ">
+            <div class="col-md-3 bmi  " style="margin-bottom:10px ;">
+                <div class="card card2">
+                    <h1 style="align-self: center;"><i class="fas fa-weight" style="padding-right: 2%;"></i>BMI
+                        Calculator</h1>
+                    <form>
+
+                        <div class="form-row">
+
+                            <div class="form-row">
+                                <label
+                                    style="align-self: center;font-size: larger;font-weight: bolder;margin-top: 2px;">Height
+                                    : </label>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                                <select class="form-control-md">
+                                    <option>cms</option>
+                                    <option>inches</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="spacer"></div>
+                        <div class="form-row">
+                            <div class="col">
+                                <label
+                                    style="align-self: center; margin-top: 5px; font-size: larger; font-weight: bolder;">Weight
+                                    : </label>
+
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Kgs">
+                            </div>
+                        </div>
+                        <div class="row genbtn justify-content-center align-items-center">
+                            <button type="button" class="btn btn-danger" style="font-size: x-large;"><i
+                                    class="fas fa-calculator" style="font-size: x-large;"></i> Calculate !!!</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+            <div class="col-md-3">
+
+
+            </div>
+            <div class="col-md-3 ml-auto ">
+                <a class="nav-link dropdown-toggle hidden-arrow btn btn-dark btngroup" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false"
+                    style="font-size: x-large;"><i class="fas fa-user-friends" style="font-size: x-large;"></i>
+                    Connections
+                </a>
+                <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownMenuLink">
+                    <li>
+                        <div class="input-group mt-2 mx-2">
+                            <div class="form-outline">
+                                <input type="search" id="form1" class="form-control-dropdown" />
+                                <label class="form-label" for="form1">Search</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="row ">
+            <div class="col-md-3 ">
+
+
+
+                <a class="nav-link dropdown-toggle hidden-arrow btn btn-dark btngroup" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false"
+                    style="font-size: x-large;"><i class="fas fa-poll" style="font-size: x-large;"></i>
+                    BMI History
+                </a>
+                <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownMenuLink">
+                    <li>
+                        <div class="input-group mt-2 mx-2">
+                            <div class="form-outline">
+                                <input type="search" id="form1" class="form-control-dropdown" />
+                                <label class="form-label" for="form1">Search</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+
+
+            </div>
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-3 ml-auto">
+                <a class="nav-link dropdown-toggle hidden-arrow btn btn-dark btngroup" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false"
+                    style="font-size: x-large;"><i class="fas fa-globe" style="font-size: x-large;"></i>
+                    Invitations
+                </a>
+                <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownMenuLink">
+                    <li>
+                        <div class="input-group mt-2 mx-2">
+                            <div class="form-outline">
+                                <input type="search" id="form1" class="form-control-dropdown" />
+                                <label class="form-label" for="form1">Search</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+    <%- include("footer.ejs") -%>

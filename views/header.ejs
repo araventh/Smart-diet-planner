@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src="https://kit.fontawesome.com/e14357d339.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./styles.css">
     <script src="./node.js"></script>
@@ -20,9 +22,11 @@
             <h1 class="display-4 font-weight-bold">SMART DIET PLANNER</h1>
             <p class="lead">For your best Diet Plans</p>
         </div>
-       <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-           <div>
-               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+            <div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
@@ -40,17 +44,20 @@
                 </div>
             </div>
             <% if(flag==1) { %>
-            <div class="">
-                <a data-target="#SigninModal" data-toggle="modal" class="" id="signin" href="#SigninModal">Sign in</a>
-                <p style="display:inline">/</p>
-                <a data-target="#LoginModal" data-toggle="modal" class="" id="signin" href="#LoginModal">Log in</a>
-            </div>
-            <% } else { %>
-            <div>
-                <p style="display: inline;"> <%= use_name %> </p>
-                <i class="fas fa-user-circle"></i>
-            </div>
-            <% } %>
+                <div class="">
+                    <a data-target="#SigninModal" data-toggle="modal" class="" id="signin" href="#SigninModal">Sign
+                        in</a>
+                    <p style="display:inline">/</p>
+                    <a data-target="#LoginModal" data-toggle="modal" class="" id="signin" href="#LoginModal">Log in</a>
+                </div>
+                <% } else { %>
+                    <div>
+                        <p style="display: inline;">
+                            <%= use_name %>
+                        </p>
+                        <a href="/user"><i style="font-size:x-large" class="fas fa-user-circle"></i></a>
+                    </div>
+                    <% } %>
         </nav>
-    
+
     </div>
