@@ -57,11 +57,42 @@
     /* margin-top: 10%; */
     margin: 8% 30% 30% 30%;
 }
-.form1{
+/* .form1{
     height: 50;
     
-}
+} */
 /* .img3{
     /* image-rendering: auto; */
 /* } */
-   
+.lab1{
+    margin-top: 5%;
+}
+.inputlab1{
+    margin-top: 5%;
+}
+   .genbtn{
+       margin-top: 5%;
+       margin-bottom: 5%;
+   }
+   .menu{
+    background-color: #1EB980;
+       
+   }
+   .card{
+       /* height: 2050px;
+        */
+        border: solid;
+        background-color:snow;
+   }
+   .foodmenu{
+       padding: 2%;
+       /* font-family: Montserrat;
+        */
+        font-family: 'Montserrat', sans-serif;
+    
+    line-height: 1.4;
+   }
+   .scroll {
+    max-height: 200px;
+    overflow-y: auto;
+}
