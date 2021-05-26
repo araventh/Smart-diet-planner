@@ -1,43 +1,7 @@
 <%- include("header.ejs") -%>
-    <div class="jumbtron jumbtron-fluid text-white">
-        <div class="container">
-            <h1 class="display-4 font-weight-bold">SMART DIET PLANNER</h1>
-            <p class="lead">For your best Diet Plans</p>
-        </div>
-       <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-           <div>
-               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto ">
-                        <li class="navbar-item active ml-md-5">
-                            <a class="nav-link text-light" href="#">HOME</a>
-                        </li>
-                        <li class="navbar-item ml-md-5">
-                            <a class="nav-link text-light" href="#">DIET CHART</a>
-                        </li>
-                        <li class="navbar-item ml-md-5">
-                            <a class="nav-link text-light" href="/about">PROGRESS</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <% if(flag==1) { %>
-            <div class="">
-                <a data-target="#SigninModal" data-toggle="modal" class="" id="signin" href="#SigninModal">Sign in</a>
-                <p style="display:inline">/</p>
-                <a data-target="#LoginModal" data-toggle="modal" class="" id="signin" href="#LoginModal">Log in</a>
-            </div>
-            <% } else { %>
-            <div>
-                <p style="display: inline;"> <%= use_name %> </p>
-            </div>
-            <% } %>
-        </nav>
-    
-    </div>
-    <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"aria-hidden="true">
+
+    <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header text-center">
@@ -52,13 +16,14 @@
                             <i class="fas fa-envelope prefix grey-text"></i>
                             <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
                             <input type="email" id="defaultForm-email" class="form-control validate" name="user_email">
-                            
+
                         </div>
 
                         <div class="md-form mb-4">
                             <i class="fas fa-lock prefix grey-text"></i>
                             <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
-                            <input type="password" id="defaultForm-pass" class="form-control validate" name="user_password">
+                            <input type="password" id="defaultForm-pass" class="form-control validate"
+                                name="user_password">
                         </div>
                         <button type="submit" name="submitform" class="btn" value="2">LOG IN</button>
                     </form>
@@ -67,7 +32,8 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="SigninModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"aria-hidden="true">
+    <div class="modal fade" id="SigninModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header text-center">
@@ -82,19 +48,20 @@
 
                             <label data-error="wrong" data-success="right" for="defaultForm-email">Your Name</label>
                             <input type="text" id="defaultForm-email" class="form-control validate" name="user_name">
-                            
+
                         </div>
                         <div class="md-form mb-5">
                             <i class="fas fa-envelope prefix grey-text"></i>
                             <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
                             <input type="email" id="defaultForm-email" class="form-control validate" name="user_email">
-                            
+
                         </div>
 
                         <div class="md-form mb-4">
                             <i class="fas fa-lock prefix grey-text"></i>
                             <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
-                            <input type="password" id="defaultForm-pass" class="form-control validate" name="user_password">
+                            <input type="password" id="defaultForm-pass" class="form-control validate"
+                                name="user_password">
                         </div>
                         <button type="submit" name="submitform" class="btn" value="1">SIGN IN</button>
                     </form>
@@ -103,38 +70,135 @@
             </div>
         </div>
     </div>
-<div class="container-fluid bg-light pt-3">
-    <div class="row align-items-start">
-        <div class="col-lg-6 imgbody1  ">
-            <img src="https://betterme.world/articles/wp-content/uploads/2020/05/15-Day-Diet-Meal-Plan-To-Put-Weight-Loss-In-Motion.jpg" class="img-fluid rounded" alt="Responsive image">
-          
-        </div>
-        <div class="col-lg-6 body1 ">
-         
-            <h1 class="display-5 font-weight-bold ">We recommend FREE personalised Diet for Weight Management based on your Lifestyle and Taste.</h1>
-            <div class="container-fluid  d-flex justify-content-center">
-           
-            <figure class="figure fig1 ">
-                <div class="icon1">
-                <i class="fas fa-heartbeat icon1" ></i>
-                </div>
-                <!-- <img src="..." class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure."> -->
-                <figcaption class="figure-caption capti" >Lose Weight For Ever</figcaption>
-              </figure>
-              
-            <figure class="figure ">
-                <div class="icon1">
-                <i class="fas fa-weight ind_icon2"></i>
-                </div>
-                <!-- <i class="fas fa-heartbeat icon1" ></i> -->
-                <!-- <img src="..." class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure."> -->
-                <figcaption class="figure-caption capti">Maintain Weight For Ever</figcaption>
-              </figure>
-              
-            </div>
-        </div>
-    
-    </div>
-    
+    <div class="container-fluid bg-light pt-3">
+        <div class="row align-items-start">
+            <div class="col-lg-6 imgbody1  ">
+                <img src="https://betterme.world/articles/wp-content/uploads/2020/05/15-Day-Diet-Meal-Plan-To-Put-Weight-Loss-In-Motion.jpg"
+                    class="img-fluid rounded" alt="Responsive image">
 
-    <%- include("footer.ejs") -%>
+            </div>
+            <div class="col-lg-6 body1 ">
+
+                <h1 class="display-5 font-weight-bold ">We recommend FREE personalised Diet for Weight Management based
+                    on your Lifestyle and Taste.</h1>
+                <div class="container-fluid  d-flex justify-content-center">
+
+                    <figure class="figure fig1 ">
+                        <div class="icon1">
+                            <i class="fas fa-heartbeat icon1"></i>
+                        </div>
+                        <!-- <img src="..." class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure."> -->
+                        <figcaption class="figure-caption capti">Lose Weight For Ever</figcaption>
+                    </figure>
+
+                    <figure class="figure ">
+                        <div class="icon1">
+                            <i class="fas fa-weight ind_icon2"></i>
+                        </div>
+                        <!-- <i class="fas fa-heartbeat icon1" ></i> -->
+                        <!-- <img src="..." class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure."> -->
+                        <figcaption class="figure-caption capti">Maintain Weight For Ever</figcaption>
+                    </figure>
+
+                </div>
+
+            </div>
+
+        </div>
+        <hr class="my-4">
+
+        <div class="card-deck card1 ">
+
+
+            <div class="card">
+                <img src="https://smartdietplanner.com/wp-content/uploads/2020/12/s1.png" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <h3 class="card-title font-weight-bold">We create Smart Diet Recommendations</h5>
+                        <p class="card-text">We compute calories needed for you as per your gender, height,
+                            weight
+                            and lifestyle, then we design food recommendations to take care of “How much”,
+                            “What”
+                            and “When” to eat.</p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img src="https://smartdietplanner.com/wp-content/uploads/2020/12/s2.png" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <h3 class="card-title font-weight-bold">Use Diet planner to create your own plan</h5>
+                        <p class="card-text">We give you options to choose food items of your likings and
+                            update.
+                            And once you update we recompute
+                            :Calories in plan, nutrients in plan, distribution in day and if any if these
+                            are not
+                            aligned to the
+                            recommended then we alert you to alter it</p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img src="https://jobflare-wordpress-public.s3.amazonaws.com/wp-content/uploads/2020/08/Dietician-Nutritionist-Header.png"
+                    class="card-img-top" alt="...">
+                <hr class="my-0">
+
+                <div class="card-body">
+                    <h3 class="card-title font-weight-bold">Personalised Habits coachs</h5>
+                        <p class="card-text">Habits are foundation of weight loss and we help you in
+                            adopting these
+                            with smart trackers. We also
+                            share science behind each habit. Primarily for weight loss and diet, you’ll get
+                            a ton of
+                            support
+                            from your coach and the WW community.</p>
+                </div>
+            </div>
+            <!-- <hr class="featurette-divider"> -->
+           <hr class=""
+            <div class="col-lg-4"> <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                    aria-label="Placeholder: 140x140">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                        dy=".3em">140x140</text>
+                </svg>
+                <h2>We create Smart Diet Recommendations</h2>
+                <p>We compute calories needed for you as per your gender, height, weight and lifestyle, then we design
+                    food recommendations to take care of “How much”, “What” and “When” to eat.</p>
+            </div>
+            <div class="col-lg-4">
+                <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                    aria-label="Placeholder: 140x140">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                        dy=".3em">140x140</text>
+                </svg>
+                <h2>Use Diet planner to create your own plan</h2>
+                <p>We give you options to choose food items of your likings and update. And once you update we recompute
+                    :Calories in plan, nutrients in plan, distribution in day and if any if these are not aligned to the
+                    recommended then we alert you to alter it</p>
+
+            </div>
+            <div class="col-lg-4">
+                <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                    aria-label="Placeholder: 140x140">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                        dy=".3em">140x140</text>
+                </svg>
+                <h2>Personalised Habits coachs</h2>
+                <p>Habits are foundation of weight loss and we help you in adopting these with smart trackers. We also
+                    share science behind each habit. Primarily for weight loss and diet, you’ll get a ton of support
+                    from your coach and the WW community.</p>
+
+            </div>
+
+        </div>
+
+
+        <%- include("footer.ejs") -%>

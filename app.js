@@ -7,7 +7,7 @@ const client = new Client({
     host: "localhost",
     port: 5432,
     user: "postgres",
-    password: "Dhanush@04",
+    password: "11babli22",
     database: "dbms_project"
 })
 
@@ -20,9 +20,9 @@ app.get("/",function(req,res){
     res.render("index",{flag:1});
 });
 
+var result="";
 app.post("/",function(req,res){
     var but = req.body.submitform;
-    var result="";
 
     let uemail= req.body.user_email;
     let upass = req.body.user_password;
@@ -57,5 +57,7 @@ app.post("/",function(req,res){
 app.get("/about",function(req,res){
     res.render("about");
 });
-
+app.get("/dietplan",function(req,res){
+    res.render("dietplan",{flag:2,use_name: result});
+});
 app.listen(3000);

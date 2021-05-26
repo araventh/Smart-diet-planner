@@ -6,12 +6,17 @@
     background-color: #045D56;
 }
 
+
 .body1{
     font-family: 'Montserrat', sans-serif;
     
     line-height: 1.4;
     padding: 5% 5% 5% 5%;
     
+    
+}
+.form1{
+    padding: 5% 25% 25% 5%;
     
 }
 .imgbody1{
@@ -38,7 +43,25 @@
 .cap1{
     padding-left: 2%;
     font-size: larger;
-
+    
     font-weight: bolder;
-
+    
 }
+.card1{
+    font-family: 'Montserrat', sans-serif;
+    
+    line-height: 1.4;
+    padding: 5% 5% 5% 5%;
+}
+.chartbox{
+    /* margin-top: 10%; */
+    margin: 8% 30% 30% 30%;
+}
+.form1{
+    height: 50;
+    
+}
+/* .img3{
+    /* image-rendering: auto; */
+/* } */
+   
