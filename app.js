@@ -60,4 +60,8 @@ app.get("/about",function(req,res){
 app.get("/dietplan",function(req,res){
     res.render("dietplan",{flag:2,use_name: result});
 });
+app.get("/user",function(req,res){
+    res.render("user",{flag:3,use_name: result});
+    // res.render("user");
+});
 app.listen(3000);
