@@ -6,24 +6,89 @@
         budget, and schedule. Reach your diet and nutritional goals with our calorie calculator, weekly meal plans,
         grocery lists and more. Create your meal plan right here in seconds.</p>
       <h1 style="font-weight: bolder; padding-top: 5%;">Ready to give it a shot? Let us know your diet.</h1>
-      <form style="border-style: solid ;" class="form1">
-        <div class="row justify-content-center align-items-center">
-        <!-- <div class="col-sm-10 container-fluid justify-content-center"> -->
-          <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">I Want To Eat</label>
-            <input type="number" min="0" max="20000" step="100" placeholder="####" value="1100"
-              class="form-control-lg calorie-input-lg text-md-right" id="cal_input">
-            <!-- <input type="number" min="0" max="20000" step="100"  value="1100" > -->
-            <label for="cal_input" id="cal-input-label" style="font-size: 140%;">Calories</label>
-            <!-- <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="col-form-label-lg"> -->
+      <div class="row justify-content-center">
+        <div class="col-lg-5 ">
+          <form style="border-style: solid ; margin-top: 20px;"
+            class="container-fluid justify-content-center align-items-center">
+            <div class="row justify-content-center align-items-center">
+              <!-- <div class="col-sm-10 container-fluid justify-content-center"> -->
+              <div class="lab1">
+                <label for="colFormLabelLg" class="col-form-label col-form-label-lg" style="padding-right:10px;"> I Want
+                  To Eat</label>
+                <input type="number" min="0" max="20000" step="100" placeholder="####" value="1100"
+                  class="form-control-lg calorie-input-lg text-md-right " style="padding-left: 15px;" id="cal_input">
+                <!-- <input type="number" min="0" max="20000" step="100"  value="1100" > -->
+                <label for="cal_input" id="cal-input-label" style="font-size: 140%;padding-left: 15px;">Calories</label>
+              </div>
+              <!-- <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="col-form-label-lg"> -->
+            </div>
+            <div class="row justify-content-center align-items-center">
 
-          </div>
-        <div class="row justify-content-center align-items-center">
-
-          <button type="button" class="btn btn-dark">Generate !</button>
+              <button type="button" class="btn btn-dark genbtn">Generate !</button>
+            </div>
         </div>
+      </div>
 
-        <!-- </div> -->
+      <!-- </div> -->
 
       </form>
+  </div>
+  <hr class="my-9">
+  <div class="container-fluid menu">
+    
+      <div class="row  justify-content-center foodmenu">
+        <!-- <div class="col-sm-4">
+        <div class="card">...</div> -->
+
+        <div class="col-lg-5 scroll">
+          <div class="card">
+            <h1 style="font-weight: bolder;font-size:50px;">Breakfast</h1>
+            <p  style="font-weight: larger;">asjdhaskhkahsdkasdhkhaskdhaskdhkadhkahdkadkhakhA paragraph is a self-contained unit of discourse in
+              writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not
+              required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to
+              organize longer prose.</p>
+
+          </div>
+        </div>
+      </div>
+   
+
+    
+    <div class="row  justify-content-center foodmenu">
+
+
+      <div class="col-lg-5 scroll">
+        <div class="card">
+          <h1  style="font-weight: bolder;font-size:50px;">Lunch</h1>
+          <p  style="font-weight: larger;">asjdhaskhkahsdkasdhkhaskdhaskdhkadhkahdkadkhakhA paragraph is a self-contained unit of discourse in writing
+            dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required
+            by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize
+            longer prose.</p>
+
+        </div>
+
+   
+
+      </div>
+    </div>
+    <div class="row  justify-content-center foodmenu">
+
+      <div class="col-lg-5 scroll">
+        <div class="card">
+          <h1  style="font-weight: bolder;font-size:50px;">Dinner</h1>
+          <p  style="font-size: larger;">asjdhaskhkahsdkasdhkhaskdhaskdhkadhkahdkadkhakhA paragraph is a self-contained unit of discourse in writing
+            dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required
+            by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize
+            longer prose.</p>
+
+        </div>
+
+        
+
+      </div>
+
+
+
+  </div>
   </div>
   <%- include("footer.ejs") -%>
