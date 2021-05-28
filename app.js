@@ -1,27 +1,31 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
-const { Client } = require("pg");
+const { Pool } = require("pg");
 
-const client = new Client({
+const client = new Pool({
     host: "localhost",
     port: 5432,
     user: "postgres",
-    password: "11babli22",
+    password: "Dhanush@04",
     database: "dbms_project"
 })
+
+
 
 const app= express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
-
+var f=1;
 app.get("/",function(req,res){
-    res.render("index",{flag:1});
+
+    res.render("index",{flag:f});
 });
 
 var result="";
 app.post("/",function(req,res){
+    f=2;
     var but = req.body.submitform;
 
     let uemail= req.body.user_email;
@@ -36,7 +40,7 @@ app.post("/",function(req,res){
             const resu = await client.query('SELECT UNAME FROM USERS WHERE EMAIL=$1 AND UPASSWORD=$2',[uemail,upass]);
             result=resu.rows[0].uname;
             console.log(result);
-            res.render("index",{flag:2,use_name: result});
+            res.render("index",{flag:f,use_name: result});
             client.end();
         })();
     }
@@ -46,7 +50,7 @@ app.post("/",function(req,res){
             const resu = await client.query('SELECT UNAME FROM USERS WHERE EMAIL=$1 AND UPASSWORD=$2',[uemail,upass]);
             result=resu.rows[0].uname;
             console.log(result);
-            res.render("index",{flag:2,use_name: result});
+            res.render("index",{flag:f,use_name: result});
             client.end();
         })();
     }
@@ -58,10 +62,49 @@ app.get("/about",function(req,res){
     res.render("about");
 });
 app.get("/dietplan",function(req,res){
-    res.render("dietplan",{flag:2,use_name: result});
+    res.render("dietplan",{flag:f,use_name: result,i:1});
 });
 app.get("/user",function(req,res){
-    res.render("user",{flag:3,use_name: result});
+    res.render("user",{flag:f,use_name: result});
     // res.render("user");
 });
+app.post("/dietplan",async(req,res)=>{
+    var cal = req.body.calories;
+    let bf=[];
+    var lun=[];
+    var din=[];
+    
+    ucal = cal/3+30;
+    dcal = cal/3-30;
+    console.log(cal);
+
+    await client.connect();
+    console.log("yes");
+    var b = await client.query("select * from products where etime=$1 and calories >$2 and calories <$3",['B',dcal,ucal]);
+    for(var i=0;i<b.rowCount;i++){
+        console.log(i);
+        var temp={foods:b.rows[i].food,quant:b.rows[i].quantity,cal:b.rows[i].calories};
+        bf.push(temp);
+    }
+    b = await client.query("select * from products where etime=$1 and calories >$2 and calories <$3",['L',dcal,ucal]);
+    for(var i=0;i<b.rowCount;i++){
+        console.log(i);
+        var temp={foods:b.rows[i].food,quant:b.rows[i].quantity,cal:b.rows[i].calories};
+        lun.push(temp);
+    }
+    b = await client.query("select * from products where etime=$1 and calories >$2 and calories <$3",['D',dcal,ucal]);
+    for(var i=0;i<b.rowCount;i++){
+        console.log(i);
+        var temp={foods:b.rows[i].food,quant:b.rows[i].quantity,cal:b.rows[i].calories};
+        din.push(temp);
+    }
+    
+
+    console.log(bf[0].foods);
+    res.render("dietplan",{flag:f,use_name: result,i:2,bfarr:bf,lunarr:lun,dinarr:din});
+})
+app.get("/dietplan/diet", (res,req)=>{
+
+    return 2;
+})
 app.listen(3000);

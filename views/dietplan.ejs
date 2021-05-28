@@ -1,92 +1,130 @@
 <%- include("header.ejs") -%>
-  <!-- <div class="row container  align-items-center"> -->
-  <div class="container-fluid body1 bg-light">
-    <h1 style="font-weight: bolder; font-size: 350%;">Put your diet on autopilot</h2>
-      <p style="font-size:x-large;">Eat This Much creates personalized meal plans based on your food preferences,
-        budget, and schedule. Reach your diet and nutritional goals with our calorie calculator, weekly meal plans,
-        grocery lists and more. Create your meal plan right here in seconds.</p>
-      <h1 style="font-weight: bolder; padding-top: 5%;">Ready to give it a shot? Let us know your diet.</h1>
-      <div class="row justify-content-center">
-        <div class="col-lg-5 ">
-          <form style="border-style: solid ; margin-top: 20px;"
-            class="container-fluid justify-content-center align-items-center">
-            <div class="row justify-content-center align-items-center">
-              <!-- <div class="col-sm-10 container-fluid justify-content-center"> -->
+<div class="jumbtron jumbtron-fluid text-white">
+<div class="container">
+    <h1 class="display-4 font-weight-bold">SMART DIET PLANNER</h1>
+    <p class="lead">For your best Diet Plans</p>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+    <div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto ">
+                <li class="navbar-item active ml-md-5">
+                    <a class="nav-link text-light" href="/">HOME</a>
+                </li>
+                <li class="navbar-item ml-md-5">
+                    <a class="nav-link text-light" href="#">DIET CHART</a>
+                </li>
+                <li class="navbar-item ml-md-5">
+                    <a class="nav-link text-light" href="/about">PROGRESS</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <% if(flag==1) { %>
+        <div class="">
+            <a data-target="#SigninModal" data-toggle="modal" class="" id="signin" href="#SigninModal">Sign
+                in</a>
+            <p style="display:inline">/</p>
+            <a data-target="#LoginModal" data-toggle="modal" class="" id="signin" href="#LoginModal">Log in</a>
+        </div>
+        <% } else { %>
+            <div>
+                <p style="display: inline;">
+                    <%= use_name %>
+                </p>
+                <a href="/user"><i style="font-size:x-large" class="fas fa-user-circle"></i></a>
+            </div>
+            <% } %>
+</nav>
+
+</div>
+<!-- <div class="row container  align-items-center"> -->
+<div class="container-fluid body1 bg-light">
+  <h1 style="font-weight: bolder; font-size: 350%;">Put your diet on autopilot</h1>
+    <p style="font-size:x-large;">Eat This Much creates personalized meal plans based on your food preferences,
+      budget, and schedule. Reach your diet and nutritional goals with our calorie calculator, weekly meal plans,
+      grocery lists and more. Create your meal plan right here in seconds.</p>
+    <% if (i == 1) { %>
+    <h1 style="font-weight: bolder; padding-top: 5%;">Ready to give it a shot? Let us know your diet.</h1>
+    <div class="row justify-content-center">
+      <div class="col-lg-5 ">
+        <div style="border-style: solid ; margin-top: 20px;"
+          class="container-fluid justify-content-center align-items-center">
+          <div class="row justify-content-center align-items-center">
+            <!-- <div class="col-sm-10 container-fluid justify-content-center"> -->
+            <form method="POST" >
               <div class="lab1">
+                
                 <label for="colFormLabelLg" class="col-form-label col-form-label-lg" style="padding-right:10px;"> I Want
                   To Eat</label>
-                <input type="number" min="0" max="20000" step="100" placeholder="####" value="1100"
+                <input type="number" name="calories" min="0" max="20000" step="100" placeholder="####" value="1100"
                   class="form-control-lg calorie-input-lg text-md-right " style="padding-left: 15px;" id="cal_input">
                 <!-- <input type="number" min="0" max="20000" step="100"  value="1100" > -->
                 <label for="cal_input" id="cal-input-label" style="font-size: 140%;padding-left: 15px;">Calories</label>
               </div>
               <!-- <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="col-form-label-lg"> -->
-            </div>
-            <div class="row justify-content-center align-items-center">
+              <div class="row justify-content-center align-items-center">
 
-              <button type="button" class="btn btn-dark genbtn">Generate !</button>
-            </div>
-        </div>
+                <button type="submit" class="btn btn-dark genbtn" name="generate">Generate !</button>
+              </div>
+            </form>
+          </div>
+        </div>  
       </div>
+    </div>
+    <% } %>
+    <!-- </div> -->
 
-      <!-- </div> -->
+</div>
+<% if(i==2){ %>
+<hr class="my-9">
+<div class="container-fluid menu">
 
-      </form>
+  <div class="row  justify-content-center foodmenu">
+    <!-- <div class="col-sm-4">
+      <div class="card">...</div> -->
+
+    <div class="col-lg-5 scroll">
+      <div class="card">
+        <h1 style="font-weight: bolder;font-size:50px;">Breakfast</h1>
+        <div id="breakfast">
+          
+        <table>
+          <tr>
+            <th>Food Name</th><th>Quantity</th><th>Calories</th>
+          </tr>
+          <% bfarr.forEach(function(eachperson){ %>
+            <tr>
+            <th> <%= eachperson.foods %> </th>      <th><%= eachperson.quant %></th>       <th><%= eachperson.cal %></th>
+            </tr>
+          <% }) %>  
+        </table>
+      </div>
+    </div>
   </div>
-  <hr class="my-9">
-  <div class="container-fluid menu">
-
-    <div class="row  justify-content-center foodmenu">
-      <!-- <div class="col-sm-4">
-        <div class="card">...</div> -->
-
-      <div class="col-lg-5 scroll">
-        <div class="card">
-          <h1 style="font-weight: bolder;font-size:50px;">Breakfast</h1>
-          <p style="font-weight: larger;">asjdhaskhkahsdkasdhkhaskdhaskdhkadhkahdkadkhakhA paragraph is a self-contained
-            unit of discourse in
-            writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not
-            required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to
-            organize longer prose.</p>
-
+  </div>
+  <div class="row  justify-content-center foodmenu">
+    <div class="col-lg-5 scroll">
+      <div class="card">
+        <h1 style="font-weight: bolder;font-size:50px;">Lunch</h1>
+        <div id="Lunch">
+          
+          <table>
+            <tr>
+              <th>Food Name</th><th>Quantity</th><th>Calories</th>
+            </tr>
+            <% lunarr.forEach(function(eachperson){ %>
+              <tr>
+              <th> <%= eachperson.foods %> </th>      <th><%= eachperson.quant %></th>       <th><%= eachperson.cal %></th>
+              </tr>
+            <% }) %>  
+          </table>
         </div>
-      </div>
-    </div>
-
-
-
-    <div class="row  justify-content-center foodmenu">
-
-
-      <div class="col-lg-5 scroll">
-        <div class="card">
-          <h1 style="font-weight: bolder;font-size:50px;">Lunch</h1>
-          <p style="font-weight: larger;">asjdhaskhkahsdkasdhkhaskdhaskdhkadhkahdkadkhakhA paragraph is a self-contained
-            unit of discourse in writing
-            dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required
-            by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize
-            longer prose.</p>
-
-        </div>
-
-
-
-      </div>
-    </div>
-    <div class="row  justify-content-center foodmenu">
-
-      <div class="col-lg-5 scroll">
-        <div class="card">
-          <h1 style="font-weight: bolder;font-size:50px;">Dinner</h1>
-          <p style="font-size: larger;">asjdhaskhkahsdkasdhkhaskdhaskdhkadhkahdkadkhakhA paragraph is a self-contained
-            unit of discourse in writing
-            dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required
-            by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize
-            longer prose.</p>
-
-        </div>
-
-
 
       </div>
 
@@ -94,4 +132,49 @@
 
     </div>
   </div>
-  <%- include("footer.ejs") -%>
+  <div class="row  justify-content-center foodmenu">
+
+    <div class="col-lg-5 scroll">
+      <div class="card">
+        <h1 style="font-weight: bolder;font-size:50px;">Dinner</h1>
+        <div id="Dinner">
+          
+          <table>
+            <tr>
+              <th>Food Name</th><th>Quantity</th><th>Calories</th>
+            </tr>
+            <% dinarr.forEach(function(eachperson){ %>
+              <tr>
+              <th> <%= eachperson.foods %> </th>      <th><%= eachperson.quant %></th>       <th><%= eachperson.cal %></th>
+              </tr>
+            <% }) %>  
+          </table>
+        </div>
+
+      </div>
+
+
+
+    </div>
+  </div>  
+  
+</div>
+<% } %>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!--<script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      console.log("yes");
+      $.ajax({
+        url:'http://localhost:3000/dietplan/diet?',
+        method: 'GET',
+        success: function(result){
+          console.log(result);
+        }});
+    });
+  });
+</script> -->
+</body>
+</html>
