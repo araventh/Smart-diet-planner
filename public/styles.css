@@ -1,9 +1,9 @@
 .jumbtron {
-  background-color: #1eb980;
+  background-color:indigo;
 }
 
 .navbar {
-  background-color: #045d56;
+  background-color:rebeccapurple;
 }
 
 .body1 {
@@ -83,7 +83,7 @@
   /* height: 2050px;
         */
   border: solid;
-  background-color: snow;
+  background-color:bisque;
 }
 .foodmenu {
   padding: 2%;
@@ -110,3 +110,17 @@
 .btngroup {
   margin: 10px;
 }
+.prohead{
+  font-family: 'ZCOOL KuaiLe', cursive;
+}
+.card1 {
+  /* height: 2050px;
+        */
+        
+  border: solid;
+  background-color:gold;
+}
+.user-social-link{
+  font-size: 40px;
+}
+
