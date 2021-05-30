@@ -43,12 +43,14 @@
         </nav>
 
     </div>
-    <div class="container-fluid bg-light body2">
-        <div class="row ">
-            <div class="col-md-3 bmi  " style="margin-bottom:10px ;">
-                <div class="row">
+    <div class="container-fluid bg-light body2 " >
+        <div class="row">
+
+            <div class="col-md-3 ml-auto bmi  " >
+                <div class="row " style="margin:3px;">
                     <div class="card card2">
-                        <h1 style="align-self: center;font-weight: bolder; " ><i class="fas fa-weight" style="padding-right: 2%; "></i>BMI
+                        <h1 style="align-self: center;font-weight: bolder; "><i class="fas fa-weight"
+                                style="padding-right: 2%; "></i>BMI
                             Calculator</h1>
                         <form>
 
@@ -59,12 +61,9 @@
                                         style="align-self: center;font-size: larger;font-weight: bolder;margin-top: 2px;">Height
                                         : </label>
                                     <div class="col">
-                                        <input type="text" class="form-control" placeholder="">
+                                        <input type="text" class="form-control" placeholder="cms">
                                     </div>
-                                    <select class="form-control-md">
-                                        <option>cms</option>
-                                        <option>inches</option>
-                                    </select>
+
 
                                 </div>
                             </div>
@@ -82,32 +81,76 @@
                             </div>
                             <div class="row genbtn justify-content-center align-items-center">
                                 <button type="button" class="btn btn-danger" style="font-size: x-large;"><i
-                                        class="fas fa-calculator" style="font-size: x-large;"></i> Calculate !!!</button>
+                                        class="fas fa-calculator" style="font-size: x-large;"></i> Calculate
+                                    !!!</button>
                             </div>
 
                         </form>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Right-aligned menu
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right">
+                <div class="row ">
+                    <div class="dropdown col-md-3 " style="margin: 10px;padding-left: 40px;">
+                        <div class="btn-group">
+                            <button class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" style="font-size: x-large;"><i class="fas fa-poll"
+                                    style="font-size: x-large;"></i>
+                                BMI History
 
-                            
-                          <button class="dropdown-item" type="button">Action</button>
-                          <button class="dropdown-item" type="button">Another action</button>
-                          <button class="dropdown-item" type="button">Something else here</button>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+
+
+                                <!-- <button class="dropdown-item" type="button">Action</button>
+                                <button class="dropdown-item" type="button">Another action</button>
+                                <button class="dropdown-item" type="button">Something else here</button> -->
+                                <table class="table">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Height</th>
+                                            <th scope="col">Weight</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <!-- <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td> -->
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <!-- <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td> -->
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+
+                            </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
 
             </div>
-            
+
             <div class="col-sm-5 ml-auto">
                 <div class="container-fluid bg-light">
-                    <div class="card card1">
+                    <div class="card card3">
                         <div class="row justify-content-center align-items-center">
                             <h1 style="font-weight: bolder;" class="prohead">Profile</h1>
                         </div>
@@ -115,13 +158,13 @@
                             <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="img-radius"
                                 alt="User-Profile-Image">
                         </div>
-                        
+
                         <hr class="my-2">
                         <div class="row justify-content-center align-items-center">
                             <h2 style="font-weight: bolder;">Naren</h2>
-                            
+
                         </div>
-                        
+
 
                         <div class="row justify-content-center align-items-center">
                             <p class="text-muted" style="font-weight: bold;">Active | Male | Born 23.05.1992</p>
@@ -130,15 +173,15 @@
                         <div class="row justify-content-center align-items-center">
                             <p class="text-muted m-t-15" style="font-weight: bold;">BMI Level : </p>
                         </div>
-                        
-                        
+
+
                         <div class="progress ">
                             <div class="progress-bar bg-success" role="progressbar" style="width: 25%"
-                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <hr class="my-4" style="border: solid 1px;">
                         <div class="row user-social-link" style="margin-left: 10px; margin-bottom: 20px;">
-                            <i class="fas fa-ruler-vertical" ></i>
+                            <i class="fas fa-ruler-vertical"></i>
                         </div>
                         <div class="row user-social-link " style="margin: 1px;">
 
@@ -149,7 +192,13 @@
 
                         <div class="row justify-content-center align-items-center">
                             <!-- <p class="text-muted m-t-15" style="font-weight: bold;">BMI Level : </p> -->
-                            <div class="row justify-content-center user-social-link"><div class="col-auto"><a href="#!"><i class="fa fa-facebook text-facebook" style="color: darkblue;"></i></a></div><div class="col-auto"><a href="#!"><i class="fa fa-twitter text-twitter"></i></a></div><div class="col-auto"><a href="#!"><i class="fab fa-instagram " style="color: crimson;" ></i></i></a></div></div>
+                            <div class="row justify-content-center user-social-link">
+                                <div class="col-auto"><a href="#!"><i class="fa fa-facebook text-facebook"
+                                            style="color: darkblue;"></i></a></div>
+                                <div class="col-auto"><a href="#!"><i class="fa fa-twitter text-twitter"></i></a></div>
+                                <div class="col-auto"><a href="#!"><i class="fab fa-instagram "
+                                            style="color: crimson;"></i></i></a></div>
+                            </div>
                         </div>
                         <!-- <div  -->
 
@@ -165,37 +214,20 @@
 
                     </div>
                 </div>
-                
+
 
             </div>
             <div class="col-md-3 ml-auto ">
-                <div class="row">
-                <a class="nav-link dropdown-toggle hidden-arrow btn btn-dark btngroup" href="#"
-                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false"
-                    style="font-size: x-large;"><i class="fas fa-user-friends" style="font-size: x-large;"></i>
-                    Connections
-                </a>
-                <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownMenuLink">
-                    <li>
-                        <div class="input-group mt-2 mx-2">
-                            <div class="form-outline">
-                                <input type="search" id="form1" class="form-control-dropdown" />
-                                <label class="form-label" for="form1">Search</label>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <hr class="dropdown-divider" />
-                    </li>
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-                </div>
-                <div class="row">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Right-aligned menu
+
+
+
+                <div class="row justify-content-center" >
+                    <div class="btn-group" style="margin: 3px;">
+                        <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false" style="font-size: x-large;"><i
+                                class="fas fa-user-friends" style="font-size: x-large;"></i>
+                            Connections
+
                         </button>
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="input-group mt-2 mx-2">
@@ -203,73 +235,37 @@
                                     <input type="search" id="form1" class="form-control-dropdown" />
                                     <label class="form-label" for="form1">Search</label>
                                 </div>
-                            </div> 
-                          <button class="dropdown-item" type="button">Action</button>
-                          <button class="dropdown-item" type="button">Another action</button>
-                          <button class="dropdown-item" type="button">Something else here</button>
+                            </div>
+                            <button class="dropdown-item" type="button">Action</button>
+                            <button class="dropdown-item" type="button">Another action</button>
+                            <button class="dropdown-item" type="button">Something else here</button>
                         </div>
-                      </div>
+                    </div>
+                    <div class="btn-group " style="margin: 3px;" >
+                        <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false" style="font-size: x-large;"><i
+                                class="fas fa-globe" style="font-size: x-large;"></i>
+                            Invitations
+
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="input-group mt-2 mx-2">
+                                <div class="form-outline">
+                                    <input type="search" id="form1" class="form-control-dropdown" />
+                                    <label class="form-label" for="form1">Search</label>
+                                </div>
+                            </div>
+                            <button class="dropdown-item" type="button">Action</button>
+                            <button class="dropdown-item" type="button">Another action</button>
+                            <button class="dropdown-item" type="button">Something else here</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
 
         </div>
-        <div class="row ">
-            <div class="col-md-3 ">
 
-
-
-                <a class="nav-link dropdown-toggle hidden-arrow btn btn-dark btngroup" href="#"
-                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false"
-                    style="font-size: x-large;"><i class="fas fa-poll" style="font-size: x-large;"></i>
-                    BMI History
-                </a>
-                <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownMenuLink">
-                    <li>
-                        <div class="input-group mt-2 mx-2">
-                            <div class="form-outline">
-                                <input type="search" id="form1" class="form-control-dropdown" />
-                                <label class="form-label" for="form1">Search</label>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <hr class="dropdown-divider" />
-                    </li>
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-
-
-            </div>
-            <div class="col-md-3">
-
-            </div>
-            <div class="col-md-3 ml-auto">
-                <a class="nav-link dropdown-toggle hidden-arrow btn btn-dark btngroup" href="#"
-                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false"
-                    style="font-size: x-large;"><i class="fas fa-globe" style="font-size: x-large;"></i>
-                    Invitations
-                </a>
-                <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownMenuLink">
-                    <li>
-                        <div class="input-group mt-2 mx-2">
-                            <div class="form-outline">
-                                <input type="search" id="form1" class="form-control-dropdown" />
-                                <label class="form-label" for="form1">Search</label>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <hr class="dropdown-divider" />
-                    </li>
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </div>
-        </div>
     </div>
     </div>
     <%- include("footer.ejs") -%>
