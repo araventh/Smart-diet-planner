@@ -1,53 +1,53 @@
 <%- include("header.ejs") -%>
-<div class="jumbtron jumbtron-fluid text-white">
-    <div class="container">
-        <h1 class="display-4 font-weight-bold">SMART DIET PLANNER</h1>
-        <p class="lead">For your best Diet Plans</p>
-    </div>
-    <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-        <div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto ">
-                    <li class="navbar-item  ml-md-5">
-                        <a class="nav-link text-light" href="/">HOME</a>
-                    </li>
-                    <li class="navbar-item ml-md-5">
-                        <a class="nav-link text-light" href="/dietplan">DIET CHART</a>
-                    </li>
-                    <li class="navbar-item ml-md-5">
-                        <a class="nav-link text-light" href="/about">PROGRESS</a>
-                    </li>
-                </ul>
-            </div>
+    <div class="jumbtron jumbtron-fluid text-white">
+        <div class="container">
+            <h1 class="display-4 font-weight-bold">SMART DIET PLANNER</h1>
+            <p class="lead">For your best Diet Plans</p>
         </div>
-        <% if(flag==1) { %>
-            <div class="">
-                <a data-target="#SigninModal" data-toggle="modal" class="" id="signin" href="#SigninModal">Sign
-                    in</a>
-                <p style="display:inline">/</p>
-                <a data-target="#LoginModal" data-toggle="modal" class="" id="signin" href="#LoginModal">Log in</a>
-            </div>
-            <% } else { %>
-                <div>
-                    <p style="display: inline;">
-                        <%= use_name %>
-                    </p>
-                    <a href="/user"><i style="font-size:x-large" class="fas fa-user-circle"></i></a>
+        <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+            <div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto ">
+                        <li class="navbar-item  ml-md-5">
+                            <a class="nav-link text-light" href="/">HOME</a>
+                        </li>
+                        <li class="navbar-item ml-md-5">
+                            <a class="nav-link text-light" href="/dietplan">DIET CHART</a>
+                        </li>
+                        <li class="navbar-item ml-md-5">
+                            <a class="nav-link text-light" href="/about">PROGRESS</a>
+                        </li>
+                    </ul>
                 </div>
-                <% } %>
-    </nav>
+            </div>
+            <% if(flag==1) { %>
+                <div class="">
+                    <a data-target="#SigninModal" data-toggle="modal" class="" id="signin" href="#SigninModal">Sign
+                        in</a>
+                    <p style="display:inline">/</p>
+                    <a data-target="#LoginModal" data-toggle="modal" class="" id="signin" href="#LoginModal">Log in</a>
+                </div>
+                <% } else { %>
+                    <div>
+                        <p style="display: inline;">
+                            <%= use_name %>
+                        </p>
+                        <a href="/user"><i style="font-size:x-large" class="fas fa-user-circle"></i></a>
+                    </div>
+                    <% } %>
+        </nav>
 
-</div>
+    </div>
     <div class="container-fluid bg-light body2">
         <div class="row ">
             <div class="col-md-3 bmi  " style="margin-bottom:10px ;">
                 <div class="card card2">
-                    <h1 style="align-self: center;"><i class="fas fa-weight" style="padding-right: 2%;"></i>BMI
+                    <h1 style="align-self: center;font-weight: bolder; " ><i class="fas fa-weight" style="padding-right: 2%; "></i>BMI
                         Calculator</h1>
                     <form>
 
@@ -88,8 +88,67 @@
                 </div>
 
             </div>
-            <div class="col-md-3">
+            
+            <div class="col-sm-5 ml-auto">
+                <div class="container-fluid bg-light">
+                    <div class="card card1">
+                        <div class="row justify-content-center align-items-center">
+                            <h1 style="font-weight: bolder;" class="prohead">Profile</h1>
+                        </div>
+                        <div class="row justify-content-center align-items-center">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="img-radius"
+                                alt="User-Profile-Image">
+                        </div>
+                        
+                        <hr class="my-2">
+                        <div class="row justify-content-center align-items-center">
+                            <h2 style="font-weight: bolder;">Naren</h2>
+                            
+                        </div>
+                        
 
+                        <div class="row justify-content-center align-items-center">
+                            <p class="text-muted" style="font-weight: bold;">Active | Male | Born 23.05.1992</p>
+                        </div>
+                        <hr class="my-2" style="border: solid 1px;">
+                        <div class="row justify-content-center align-items-center">
+                            <p class="text-muted m-t-15" style="font-weight: bold;">BMI Level : </p>
+                        </div>
+                        
+                        
+                        <div class="progress ">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%"
+                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <hr class="my-4" style="border: solid 1px;">
+                        <div class="row user-social-link" style="margin-left: 10px; margin-bottom: 20px;">
+                            <i class="fas fa-ruler-vertical" ></i>
+                        </div>
+                        <div class="row user-social-link " style="margin: 1px;">
+
+                            <i class="fas fa-weight"></i>
+                        </div>
+
+                        <hr class="my-4" style="border: solid 1px;">
+
+                        <div class="row justify-content-center align-items-center">
+                            <!-- <p class="text-muted m-t-15" style="font-weight: bold;">BMI Level : </p> -->
+                            <div class="row justify-content-center user-social-link"><div class="col-auto"><a href="#!"><i class="fa fa-facebook text-facebook" style="color: darkblue;"></i></a></div><div class="col-auto"><a href="#!"><i class="fa fa-twitter text-twitter"></i></a></div><div class="col-auto"><a href="#!"><i class="fab fa-instagram " style="color: crimson;" ></i></i></a></div></div>
+                        </div>
+                        <!-- <div  -->
+
+
+
+                        <!-- </div> -->
+
+
+
+
+
+
+
+                    </div>
+                </div>
 
             </div>
             <div class="col-md-3 ml-auto ">
