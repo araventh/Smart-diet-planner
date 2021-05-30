@@ -7,7 +7,7 @@ const client = new Pool({
     host: "localhost",
     port: 5432,
     user: "postgres",
-    password: "11babli22",
+    password: "Dhanush@04",
     database: "dbms_project"
 })
 
@@ -35,13 +35,15 @@ app.post("/",function(req,res){
     if(but==1){
         (async () => {
             let uname = req.body.user_name;
+            let ugenger = req.body.gender;
+            let uheight = req.body.user_height;
+            let uweight = req.body.user_weight;
             await client.connect();
-            await client.query('INSERT INTO USERS(UNAME,EMAIL,UPASSWORD) VALUES ($1,$2,$3)',[uname,uemail,upass]);
+            await client.query('INSERT INTO USERS(UNAME,EMAIL,UPASSWORD,GENDER,WEIGHT,HEIGHT) VALUES ($1,$2,$3,$4,$5,$6)',[uname,uemail,upass,ugenger,uweight,uheight]);
             const resu = await client.query('SELECT UNAME FROM USERS WHERE EMAIL=$1 AND UPASSWORD=$2',[uemail,upass]);
             result=resu.rows[0].uname;
             console.log(result);
             res.render("index",{flag:f,use_name: result});
-            client.end();
         })();
     }
     else{
@@ -51,7 +53,6 @@ app.post("/",function(req,res){
             result=resu.rows[0].uname;
             console.log(result);
             res.render("index",{flag:f,use_name: result});
-            client.end();
         })();
     }
     

@@ -46,45 +46,61 @@
     <div class="container-fluid bg-light body2">
         <div class="row ">
             <div class="col-md-3 bmi  " style="margin-bottom:10px ;">
-                <div class="card card2">
-                    <h1 style="align-self: center;font-weight: bolder; " ><i class="fas fa-weight" style="padding-right: 2%; "></i>BMI
-                        Calculator</h1>
-                    <form>
-
-                        <div class="form-row">
+                <div class="row">
+                    <div class="card card2">
+                        <h1 style="align-self: center;font-weight: bolder; " ><i class="fas fa-weight" style="padding-right: 2%; "></i>BMI
+                            Calculator</h1>
+                        <form>
 
                             <div class="form-row">
-                                <label
-                                    style="align-self: center;font-size: larger;font-weight: bolder;margin-top: 2px;">Height
-                                    : </label>
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="">
+
+                                <div class="form-row">
+                                    <label
+                                        style="align-self: center;font-size: larger;font-weight: bolder;margin-top: 2px;">Height
+                                        : </label>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="">
+                                    </div>
+                                    <select class="form-control-md">
+                                        <option>cms</option>
+                                        <option>inches</option>
+                                    </select>
+
                                 </div>
-                                <select class="form-control-md">
-                                    <option>cms</option>
-                                    <option>inches</option>
-                                </select>
-
                             </div>
-                        </div>
-                        <div class="spacer"></div>
-                        <div class="form-row">
-                            <div class="col">
-                                <label
-                                    style="align-self: center; margin-top: 5px; font-size: larger; font-weight: bolder;">Weight
-                                    : </label>
+                            <div class="spacer"></div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <label
+                                        style="align-self: center; margin-top: 5px; font-size: larger; font-weight: bolder;">Weight
+                                        : </label>
 
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Kgs">
+                                </div>
                             </div>
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="Kgs">
+                            <div class="row genbtn justify-content-center align-items-center">
+                                <button type="button" class="btn btn-danger" style="font-size: x-large;"><i
+                                        class="fas fa-calculator" style="font-size: x-large;"></i> Calculate !!!</button>
                             </div>
-                        </div>
-                        <div class="row genbtn justify-content-center align-items-center">
-                            <button type="button" class="btn btn-danger" style="font-size: x-large;"><i
-                                    class="fas fa-calculator" style="font-size: x-large;"></i> Calculate !!!</button>
-                        </div>
 
-                    </form>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Right-aligned menu
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+
+                            
+                          <button class="dropdown-item" type="button">Action</button>
+                          <button class="dropdown-item" type="button">Another action</button>
+                          <button class="dropdown-item" type="button">Something else here</button>
+                        </div>
+                      </div>
                 </div>
 
             </div>
@@ -149,9 +165,11 @@
 
                     </div>
                 </div>
+                
 
             </div>
             <div class="col-md-3 ml-auto ">
+                <div class="row">
                 <a class="nav-link dropdown-toggle hidden-arrow btn btn-dark btngroup" href="#"
                     id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false"
                     style="font-size: x-large;"><i class="fas fa-user-friends" style="font-size: x-large;"></i>
@@ -173,6 +191,25 @@
                     <li><a class="dropdown-item" href="#">Another action</a></li>
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
+                </div>
+                <div class="row">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Right-aligned menu
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="input-group mt-2 mx-2">
+                                <div class="form-outline">
+                                    <input type="search" id="form1" class="form-control-dropdown" />
+                                    <label class="form-label" for="form1">Search</label>
+                                </div>
+                            </div> 
+                          <button class="dropdown-item" type="button">Action</button>
+                          <button class="dropdown-item" type="button">Another action</button>
+                          <button class="dropdown-item" type="button">Something else here</button>
+                        </div>
+                      </div>
+                </div>
             </div>
 
 
