@@ -45,14 +45,14 @@
     </div>
     <div class="container-fluid bg-light body2 " >
         <div class="row">
-
+            <% if(p==1){ %>
             <div class="col-md-3 ml-auto bmi  " >
                 <div class="row " style="margin:3px;">
                     <div class="card card2">
                         <h1 style="align-self: center;font-weight: bolder; "><i class="fas fa-weight"
                                 style="padding-right: 2%; "></i>BMI
                             Calculator</h1>
-                        <form>
+                        <form method="POST">
 
                             <div class="form-row">
 
@@ -61,7 +61,7 @@
                                         style="align-self: center;font-size: larger;font-weight: bolder;margin-top: 2px;">Height
                                         : </label>
                                     <div class="col">
-                                        <input type="text" class="form-control" placeholder="cms">
+                                        <input name="heig" type="number" class="form-control" placeholder="cms">
                                     </div>
 
 
@@ -76,11 +76,11 @@
 
                                 </div>
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="Kgs">
+                                    <input name="weig" type="number" class="form-control" placeholder="Kgs">
                                 </div>
                             </div>
                             <div class="row genbtn justify-content-center align-items-center">
-                                <button type="button" class="btn btn-danger" style="font-size: x-large;"><i
+                                <button id="bmi" type="submit" class="btn btn-danger" style="font-size: x-large;"><i
                                         class="fas fa-calculator" style="font-size: x-large;"></i> Calculate
                                     !!!</button>
                             </div>
@@ -88,6 +88,7 @@
                         </form>
                     </div>
                 </div>
+                
                 <div class="row ">
                     <div class="dropdown col-md-3 " style="margin: 10px;padding-left: 40px;">
                         <div class="btn-group">
@@ -106,37 +107,19 @@
                                 <table class="table">
                                     <thead class="thead-dark">
                                         <tr>
-                                            <th scope="col">#</th>
                                             <th scope="col">Date</th>
                                             <th scope="col">Height</th>
                                             <th scope="col">Weight</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <!-- <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td> -->
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <!-- <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td> -->
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
+                                        <% bmihis.forEach(function(list){ %>
+                                            <tr>
+                                                <td><%= list.edate %></td>
+                                                <td><%= list.height %></td>
+                                                <td><%= list.weight %></td>
+                                            </tr>
+                                        <% }) %>
                                     </tbody>
                                 </table>
 
@@ -145,6 +128,7 @@
                         </div>
                     </div>
                 </div>
+                <% } %>
 
             </div>
 
@@ -161,13 +145,12 @@
 
                         <hr class="my-2">
                         <div class="row justify-content-center align-items-center">
-                            <h2 style="font-weight: bolder;">Naren</h2>
-
+                            <h2 style="font-weight: bolder;"> <%= use_name %> </h2>
                         </div>
 
 
                         <div class="row justify-content-center align-items-center">
-                            <p class="text-muted" style="font-weight: bold;">Active | Male | Born 23.05.1992</p>
+                            <p class="text-muted" style="font-weight: bold;">Active | <%= gen %> </p>
                         </div>
                         <hr class="my-2" style="border: solid 1px;">
                         <div class="row justify-content-center align-items-center">
@@ -176,17 +159,32 @@
 
 
                         <div class="progress ">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%"
-                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <% if(b < 1.85){ %>
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 30%"
+                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">UNDER WEIGHT</div>
+                            <% }else if(b < 2.5){ %>
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 45%"
+                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">NORMAL WEIGHT</div>
+                            <% }else if(b < 3.0){ %>
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 60%"
+                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">PRE OBESITY</div>
+                            <% }else { %>
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 75%"
+                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">OBESITY</div>
+                            <% } %>
                         </div>
                         <hr class="my-4" style="border: solid 1px;">
                         <div class="row user-social-link" style="margin-left: 10px; margin-bottom: 20px;">
                             <i class="fas fa-ruler-vertical"></i>
+                            <p><%= wei %></p>
                         </div>
+                        
                         <div class="row user-social-link " style="margin: 1px;">
 
                             <i class="fas fa-weight"></i>
+                            <p> <%= hei %> </p>
                         </div>
+                        
 
                         <hr class="my-4" style="border: solid 1px;">
 
@@ -217,6 +215,7 @@
 
 
             </div>
+            <% if(p==1){ %>
             <div class="col-md-3 ml-auto ">
 
 
@@ -230,15 +229,9 @@
 
                         </button>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <div class="input-group mt-2 mx-2">
-                                <div class="form-outline">
-                                    <input type="search" id="form1" class="form-control-dropdown" />
-                                    <label class="form-label" for="form1">Search</label>
-                                </div>
-                            </div>
-                            <button class="dropdown-item" type="button">Action</button>
-                            <button class="dropdown-item" type="button">Another action</button>
-                            <button class="dropdown-item" type="button">Something else here</button>
+                            <% myconnect.forEach(function(list){ %>
+                                <a class="myconnection"><%= list.uname %></a>
+                            <% }) %>
                         </div>
                     </div>
                     <div class="btn-group " style="margin: 3px;" >
@@ -249,23 +242,99 @@
 
                         </button>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <div class="input-group mt-2 mx-2">
-                                <div class="form-outline">
-                                    <input type="search" id="form1" class="form-control-dropdown" />
-                                    <label class="form-label" for="form1">Search</label>
+                           
+                                <div class="input-group mt-2 mx-2">
+                                    <div class="form-outline">
+                                        <label class="form-label" for="form1">Search</label>
+                                        <input type="text" id="friends" class="form-control" />
+                                    </div>
                                 </div>
-                            </div>
-                            <button class="dropdown-item" type="button">Action</button>
-                            <button class="dropdown-item" type="button">Another action</button>
-                            <button class="dropdown-item" type="button">Something else here</button>
+                            
                         </div>
+                    </div>
+                    <div id="connect">
+                        
                     </div>
                 </div>
             </div>
+            <% } %>
 
 
         </div>
 
     </div>
     </div>
-    <%- include("footer.ejs") -%>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <script>
+        $(document).ready(function () {
+            console.log("hello");
+            $("#friends").keyup(function () {
+                console.log("hi");
+                x=$("#friends").val();
+                
+                $.ajax({
+                    url: 'http://localhost:3000/users?x='+x,
+                    method:'GET',
+                    dataType: 'json',
+                    success:function(data){
+                        console.log(data);
+                        var str="";
+                        for(let datum of data.data){
+                            console.log(datum);
+                            str+= `<button class="connectlist" value=${datum.email}>${datum.uname}</button>`
+                        }
+                      $("#connect").html(str); 
+                    },
+                    error:function(err){
+                        console.log(err);
+                    }
+
+                });
+
+            });
+            $('#connect').on('click','.connectlist',function(){
+                console.log("hai");
+                y = $(this).text();
+                console.log(y);
+               $.ajax({
+                   url: 'http://localhost:3000/use?y='+y,
+                   method:'GET',
+                   dataType: 'json',
+                    success:function(data){
+                        console.log(data);
+                            alert(`connected to ${y}`);
+
+                    },
+                    error:function(err){
+                        console.log(err);
+                    }
+                });
+            });
+            $('.myconnection').click(function(){
+                console.log("hai");
+                z= $(this).text();
+                console.log(z);
+                $.ajax({
+                   url: 'http://localhost:3000/us?z='+z,
+                   method:'GET',
+                   dataType: 'json',
+                    success:function(data){
+                        console.log(data);
+                        
+                    },
+                    error:function(err){
+                        console.log(err);
+                    }
+                });
+            });
+        });
+
+    </script> 
+<footer>
+        
+</footer>
+</body>
+</html>
