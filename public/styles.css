@@ -82,6 +82,7 @@
 .card {
   /* height: 2050px;
         */
+        /* border-radius: 5%; */
   border: solid;
   background-color:bisque;
 }

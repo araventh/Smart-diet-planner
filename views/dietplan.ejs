@@ -90,18 +90,23 @@
       <div class="card">...</div> -->
 
     <div class="col-lg-5 scroll">
-      <div class="card" style="padding:5%">
+      <div class="card card4" style="padding:5%">
         <h1 style="font-weight: bolder;font-size:50px;">Breakfast</h1>
         <div id="breakfast">
           
         <table>
           <tr>
-            <th>Food Name</th>           <th >Quantity</th>        <th >C alories</th>
-          </tr>
+                                            <th scope="col" style="padding:10px ;">Food Name</th>
+                                            <th scope="col" style="padding:10px ;">Quantity</th>
+                                            <th scope="col" style="padding:10px ;">Calories</th>
+                                        </tr>
+          
           <% bfarr.forEach(function(eachperson){ %>
-            <tr>
-            <th style="padding:5%"> <%= eachperson.foods %> </th>      <th style="padding:5%"><%= eachperson.quant %></th>       <th style="padding:5%"><%= eachperson.cal %></th>
-            </tr>
+            <tbody>
+              <tr>
+            <div class="col-sm-4" ><td style="padding:10px ;"><%= eachperson.foods %> </td> </div>    <div class="col-sm-4" > <td style="padding:10px ;"  ><%= eachperson.quant %></td> </div>     <div class="col-sm-4" > <td style="padding:10px ;"><%= eachperson.cal %></td></div>
+          </tr>
+            </tbody>
           <% }) %>  
         </table>
       </div>
@@ -110,18 +115,27 @@
   </div>
   <div class="row  justify-content-center foodmenu">
     <div class="col-lg-5 scroll">
-      <div class="card" style="padding:5%">
+      <div class="card card4" style="padding:5%">
         <h1 style="font-weight: bolder;font-size:50px;">Lunch</h1>
         <div id="Lunch">
           
-          <table>
+          <!-- <table>
             <tr>
               <th>Food Name</th><th>Quantity</th><th>Calories</th>
-            </tr>
+            </tr> -->
+                    
+        <table>
+          <tr>
+                                            <th scope="col" style="padding:10px ;">Food Name</th>
+                                            <th scope="col" style="padding:10px ;">Quantity</th>
+                                            <th scope="col" style="padding:10px ;">Calories</th>
+                                        </tr>
             <% lunarr.forEach(function(eachperson){ %>
+              <tbody>
               <tr>
-              <th> <%= eachperson.foods %> </th>      <th><%= eachperson.quant %></th>       <th><%= eachperson.cal %></th>
+                <div class="col-sm-4" ><td style="padding:10px ;"> <%= eachperson.foods %> </td></div>    <div class="col-sm-4" ><td style="padding:10px ;"> <%= eachperson.quant %></td>   </div>   <div class="col-sm-4" ><td style="padding:10px ;"><%= eachperson.cal %></td></div>
               </tr>
+            </tbody>
             <% }) %>  
           </table>
         </div>
@@ -135,18 +149,22 @@
   <div class="row  justify-content-center foodmenu">
 
     <div class="col-lg-5 scroll">
-      <div class="card" style="padding:5%">
+      <div class="card card4" style="padding:5%">
         <h1 style="font-weight: bolder;font-size:50px;">Dinner</h1>
         <div id="Dinner">
           
           <table>
             <tr>
-              <th>Food Name</th><th>Quantity</th><th>Calories</th>
-            </tr>
+                                              <th scope="col" style="padding:10px ;">Food Name</th>
+                                              <th scope="col" style="padding:10px ;">Quantity</th>
+                                              <th scope="col" style="padding:10px ;">Calories</th>
+                                          </tr>
             <% dinarr.forEach(function(eachperson){ %>
+              <tbody>
               <tr>
-              <th> <%= eachperson.foods %> </th>      <th><%= eachperson.quant %></th>       <th><%= eachperson.cal %></th>
+                <div class="col-sm-4" ><td style="padding:10px ;">  <%= eachperson.foods %> </td></div>       <div class="col-sm-4" ><td style="padding:10px ;"> <%= eachperson.quant %></td></div>        <div class="col-sm-4" ><td style="padding:10px ;"> <%= eachperson.cal %></td></div>
               </tr>
+              </tbody>
             <% }) %>  
           </table>
         </div>
