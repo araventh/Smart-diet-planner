@@ -90,17 +90,17 @@
       <div class="card">...</div> -->
 
     <div class="col-lg-5 scroll">
-      <div class="card">
+      <div class="card" style="padding:5%">
         <h1 style="font-weight: bolder;font-size:50px;">Breakfast</h1>
         <div id="breakfast">
           
         <table>
           <tr>
-            <th>Food Name</th><th>Quantity</th><th>Calories</th>
+            <th>Food Name</th>           <th >Quantity</th>        <th >C alories</th>
           </tr>
           <% bfarr.forEach(function(eachperson){ %>
             <tr>
-            <th> <%= eachperson.foods %> </th>      <th><%= eachperson.quant %></th>       <th><%= eachperson.cal %></th>
+            <th style="padding:5%"> <%= eachperson.foods %> </th>      <th style="padding:5%"><%= eachperson.quant %></th>       <th style="padding:5%"><%= eachperson.cal %></th>
             </tr>
           <% }) %>  
         </table>
@@ -110,7 +110,7 @@
   </div>
   <div class="row  justify-content-center foodmenu">
     <div class="col-lg-5 scroll">
-      <div class="card">
+      <div class="card" style="padding:5%">
         <h1 style="font-weight: bolder;font-size:50px;">Lunch</h1>
         <div id="Lunch">
           
@@ -135,7 +135,7 @@
   <div class="row  justify-content-center foodmenu">
 
     <div class="col-lg-5 scroll">
-      <div class="card">
+      <div class="card" style="padding:5%">
         <h1 style="font-weight: bolder;font-size:50px;">Dinner</h1>
         <div id="Dinner">
           
